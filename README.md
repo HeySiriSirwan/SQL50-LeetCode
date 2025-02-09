@@ -2,7 +2,7 @@
 Solutions for [SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/) on LeetCode
 
 ---
-##SELECT
+## SELECT
 
 [1757 - Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
 ```sql
@@ -38,7 +38,7 @@ SELECT tweet_id
 FROM tweets
 WHERE LENGTH(content) > 15
 ```
-##Basic Joins
+## Basic Joins
 [1378 - Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier)
 ```sql
 SELECT EmployeeUNI.unique_id, employees.name
@@ -123,7 +123,7 @@ FROM Signups
     LEFT JOIN Confirmations USING (user_id)
 GROUP BY user_id
 ```
-##Basic Aggregate Functions
+## Basic Aggregate Functions
 
 [620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies)
 ```sql
@@ -176,7 +176,7 @@ GROUP BY project_id
 ```sql
 
 ```
-##Sorting and Grouping
+## Sorting and Grouping
 
 [2356. Number of Unique Subjects Taught by Each Teacher](https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher)
 ```sql
@@ -213,7 +213,7 @@ GROUP BY project_id
 ```sql
 
 ```
-##Advanced Select and Joins
+## Advanced Select and Joins
 [1731. The Number of Employees Which Report to Each Employee
 ](https://leetcode.com/problems/the-number-of-employees-which-report-to-each-employee/)
 
@@ -243,7 +243,7 @@ GROUP BY project_id
 
 ```
 
-##Subqueries
+## Subqueries
 [1978. Employees Whose Manager Left the Company](https://leetcode.com/problems/employees-whose-manager-left-the-company)
 ```sql
 
@@ -254,7 +254,7 @@ GROUP BY project_id
 
 ```
 
-##Advanced String Functions / Regex / Clause
+## Advanced String Functions / Regex / Clause
 [1667. Fix Names in a Table](https://leetcode.com/problems/fix-names-in-a-table)
 ```sql
 
