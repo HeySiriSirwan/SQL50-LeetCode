@@ -164,7 +164,20 @@ GROUP BY project_id
 
 [1193. Monthly Transactions I](https://leetcode.com/problems/monthly-transactions-i/)
 ```sql
-
+SELECT 
+    TO_CHAR(trans_date, 'YYYY-MM') AS month,
+    -- SUBSTRING(trans_date::TEXT FROM 1 FOR 7) AS month
+    -- LEFT(trans_date::TEXT, 7) AS month
+    -- DATE_PART('year', trans_date) || '-' || LPAD(DATE_PART('month', trans_date),2,'0') AS month
+    country,
+    COUNT(*) AS trans_count,
+    COUNT(*) FILTER (WHERE state = 'approved') AS approved_count,
+    -- SUM(CASE WHEN state = 'approved' THEN 1 ELSE 0 END) AS approved_count
+    SUM(amount) FILTER (WHERE state = 'approved') AS approved_total_amount,
+    -- SUM(CASE WHEN state = 'approved' THEN amount ELSE 0 END) AS approved_total_amount
+    SUM(amount) AS trans_total_amount
+FROM transactions
+GROUP BY month, country
 ```
 
 [1174. Immediate Food Delivery II](https://leetcode.com/problems/immediate-food-delivery-ii/)
